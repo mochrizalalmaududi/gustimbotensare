@@ -8,6 +8,9 @@
     <title>Gusti Mboten Sare - Independent Mobile App Developer</title>
     <meta name="description" content="Independent Mobile App Developer specializing in Flutter Applications, Business Solutions, and Enterprise Productivity Apps. Tersedia di LinkedIn, Fastwork, dan Sribu.">
     
+    <!-- Font Awesome (Khusus untuk Logo LinkedIn) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
     <style>
         /* Pengaturan Dasar */
         * {
@@ -17,7 +20,7 @@
         }
 
         body {
-            background: #111111;
+            background: #0a0a0a;
             font-family: 'Segoe UI', Arial, sans-serif;
             color: #ffffff;
             text-align: center;
@@ -27,42 +30,68 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Kontainer Logo */
+        /* Efek Aurora Glow Lembut di Latar Belakang */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            background: rgba(255, 152, 0, 0.07);
+            border-radius: 50%;
+            filter: blur(90px);
+            top: 15%;
+            z-index: 0;
+        }
+
+        /* Kontainer Utama */
+        .main-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Kontainer Logo Utama */
         .logo-container {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             background: #000000;
-            border-radius: 32px;
+            border-radius: 28px;
             padding: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 25px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            border: 1px solid #222;
         }
 
         .logo-container img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 24px;
+            border-radius: 20px;
         }
 
         /* Judul Utama */
         h1 {
-            font-size: 36px;
-            margin-bottom: 16px;
+            font-size: 34px;
+            margin-bottom: 12px;
             letter-spacing: -0.5px;
             font-weight: 700;
         }
 
         /* Deskripsi */
         p {
-            font-size: 18px;
-            color: #bbbbbb;
-            max-width: 600px;
+            font-size: 16px;
+            color: #aaaaaa;
+            max-width: 520px;
             margin: 0 auto 35px auto;
             line-height: 1.6;
         }
@@ -71,57 +100,80 @@
         .button-group {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             width: 100%;
-            max-width: 340px;
+            max-width: 350px;
         }
 
         /* Desain Umum Tombol */
         .btn {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 16px 30px;
+            padding: 16px 24px;
             color: #ffffff;
             text-decoration: none;
             border-radius: 14px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-weight: 600;
+            font-size: 15px;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
-        /* 1. Tombol LinkedIn (Warna Oranye Utama) */
+        /* Gaya Khusus untuk Ikon Gambar PNG */
+        .btn-icon-img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* Gaya Ikon Font Awesome (LinkedIn) */
+        .btn i {
+            font-size: 22px;
+            width: 22px;
+            text-align: left;
+        }
+
+        /* Perataan Teks di Tengah Tombol */
+        .btn span {
+            flex-grow: 1;
+            text-align: center;
+            margin-right: 22px; /* Menyeimbangkan posisi teks agar tetap presisi di tengah */
+        }
+
+        /* 1. Tombol LinkedIn (Oranye Premium) */
         .btn-linkedin {
             background: #ff9800;
-            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.25);
         }
         .btn-linkedin:hover {
             background: #e65100;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.35);
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
         }
 
-        /* 2. Tombol Fastwork (Aksen Abu-abu Gelap Premium) */
+        /* 2. Tombol Fastwork */
         .btn-fastwork {
-            background: #222222;
-            border: 1px solid #333333;
+            background: #181818;
+            border: 1px solid #2d2d2d;
         }
         .btn-fastwork:hover {
-            background: #333333;
+            background: #252525;
             border-color: #444444;
-            transform: translateY(-2px);
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 255, 170, 0.1); /* Pendaran hijau tipis sesuai khas Fastwork */
         }
 
-        /* 3. Tombol Sribu (Aksen Abu-abu Gelap Premium) */
+        /* 3. Tombol Sribu */
         .btn-sribu {
-            background: #222222;
-            border: 1px solid #333333;
+            background: #181818;
+            border: 1px solid #2d2d2d;
         }
         .btn-sribu:hover {
-            background: #333333;
+            background: #252525;
             border-color: #444444;
-            transform: translateY(-2px);
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.1); /* Pendaran biru tipis sesuai khas Sribu */
         }
 
         /* Mengatur Tampilan di Layar HP */
@@ -130,56 +182,60 @@
                 padding: 40px 20px;
             }
             .logo-container {
-                width: 130px;
-                height: 130px;
+                width: 120px;
+                height: 120px;
                 margin-bottom: 20px;
             }
             h1 {
-                font-size: 30px;
+                font-size: 28px;
             }
             p {
-                font-size: 16px;
-                line-height: 1.5;
+                font-size: 14px;
             }
             .btn {
                 padding: 14px 20px;
-                font-size: 15px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Kontainer Logo -->
-    <div class="logo-container">
-        <img src="logo.png" alt="Gusti Mboten Sare Logo">
-    </div>
+    <div class="main-content">
+        <!-- Kontainer Logo Utama -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Gusti Mboten Sare Logo">
+        </div>
 
-    <h1>Gusti Mboten Sare</h1>
+        <h1>Gusti Mboten Sare</h1>
 
-    <p>
-        Independent Mobile App Developer specializing in Flutter Applications, 
-        Business Solutions, and Enterprise Productivity Apps.
-    </p>
+        <p>
+            Independent Mobile App Developer specializing in Flutter Applications, 
+            Business Solutions, and Enterprise Productivity Apps.
+        </p>
 
-    <!-- Kumpulan Link Portofolio & Jasa Freelance -->
-    <div class="button-group">
-        
-        <!-- LinkedIn -->
-        <a class="btn btn-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            Hire me on LinkedIn
-        </a>
+        <!-- Kumpulan Link Portofolio & Jasa Freelance -->
+        <div class="button-group">
+            
+            <!-- LinkedIn -->
+            <a class="btn btn-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>Hire me on LinkedIn</span>
+            </a>
 
-        <!-- Fastwork -->
-        <a class="btn btn-fastwork" href="https://fastwork.id/user/mochrizal7?source=web_chat_user-profile-modal" target="_blank" rel="noopener noreferrer">
-            Hire me on Fastwork
-        </a>
+            <!-- Fastwork (Ikon PNG) -->
+            <a class="btn btn-fastwork" href="https://fastwork.id" target="_blank" rel="noopener noreferrer">
+                <img src="icon-fastwork.png" alt="Fastwork Icon" class="btn-icon-img">
+                <span>Hire me on Fastwork</span>
+            </a>
 
-        <!-- Sribu -->
-        <a class="btn btn-sribu" href="https://www.sribu.com/id/freelancer/profile/d23ec3c2-451d-474b-ba54-368e59fad77e" target="_blank" rel="noopener noreferrer">
-            Hire me on Sribu
-        </a>
+            <!-- Sribu (Ikon PNG) -->
+            <a class="btn btn-sribu" href="https://sribu.com" target="_blank" rel="noopener noreferrer">
+                <img src="icon-sribu.png" alt="Sribu Icon" class="btn-icon-img">
+                <span>Hire me on Sribu</span>
+            </a>
 
+        </div>
     </div>
 
 </body>
