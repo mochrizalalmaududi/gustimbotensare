@@ -1,115 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Gusti Mboten Sare - Independent Mobile App Developer</title>
+    <meta name="description" content="Independent Mobile App Developer specializing in Flutter Applications, Business Solutions, and Enterprise Productivity Apps.">
+    
+    <style>
+        /* Pengaturan Dasar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<meta charset="UTF-8">
+        body {
+            background: #111111;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+        /* Kontainer Khusus untuk Logo Baru */
+        .logo-container {
+            width: 160px;
+            height: 160px;
+            background: #000000;
+            border-radius: 32px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
 
-<title>Gusti Mboten Sare</title>
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 24px;
+        }
 
-<style>
+        /* Judul Utama */
+        h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+        }
 
-body{
+        /* Deskripsi */
+        p {
+            font-size: 18px;
+            color: #bbbbbb;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
 
-background:#111;
+        /* Tombol LinkedIn */
+        .button {
+            display: inline-block;
+            padding: 16px 45px;
+            background: #ff9800;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.25);
+        }
 
-font-family:Arial;
+        /* Efek Hover Tombol */
+        .button:hover {
+            background: #e65100;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 152, 0, 0.45);
+        }
 
-color:white;
-
-text-align:center;
-
-padding-top:80px;
-
-}
-
-img{
-
-width:180px;
-
-border-radius:30px;
-
-}
-
-h1{
-
-font-size:42px;
-
-margin-top:30px;
-
-}
-
-p{
-
-font-size:20px;
-
-color:#bbbbbb;
-
-max-width:700px;
-
-margin:auto;
-
-line-height:35px;
-
-}
-
-.button{
-
-display:inline-block;
-
-margin-top:40px;
-
-padding:18px 45px;
-
-background:#ff9800;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:10px;
-
-font-weight:bold;
-
-}
-
-</style>
-
+        /* Mengatur Tampilan di Layar HP */
+        @media (max-width: 480px) {
+            body {
+                padding: 40px 15px;
+            }
+            .logo-container {
+                width: 130px;
+                height: 130px;
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .button {
+                width: 100%;
+                max-width: 280px;
+                padding: 14px 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<img src="logo.png">
+    <!-- Kontainer Logo -->
+    <div class="logo-container">
+        <!-- Pastikan file logo.png sudah di-upload ke repository GitHub Anda -->
+        <img src="logo.png" alt="Gusti Mboten Sare Logo">
+    </div>
 
-<h1>Gusti Mboten Sare</h1>
+    <h1>Gusti Mboten Sare</h1>
 
-<p>
+    <p>
+        Independent Mobile App Developer specializing in Flutter Applications, 
+        Business Solutions, and Enterprise Productivity Apps.
+    </p>
 
-Independent Mobile App Developer
-
-specializing in Flutter Applications,
-
-Business Solutions,
-
-and Enterprise Productivity Apps.
-
-</p>
-
-<a
-
-class="button"
-
-href="https://linkedin.com/in/moch-rizal-al-maududi-70171621a"
-
->
-
-LinkedIn
-
-</a>
+    <a class="button" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+    </a>
 
 </body>
-
 </html>
